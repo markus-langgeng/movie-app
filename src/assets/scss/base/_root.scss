@@ -1,0 +1,50 @@
+@use "../abstracts/" as *;
+
+:root {
+  //color
+  @each $color, $shades in $colors {
+    @each $shades, $value in $shades {
+      --clr-#{$color}-#{$shades}: #{$value};
+    }
+  }
+
+  //font familiy
+  @each $font-family, $value in $fonts {
+    --ff-#{$font-family}: #{$value};
+  }
+
+  //font weight
+  @each $weight, $value in $font-weight {
+    --fw-#{$weight}: #{$value};
+  }
+
+  //line height
+  @each $bp, $bp-val in $line-height {
+    @if $bp == small {
+      @each $height-scale, $value in $bp-val {
+        --lh-#{$height-scale}: #{$value};
+      }
+    } @else {
+      @include mq(medium) {
+        @each $height, $value in $bp-val {
+          --lh-#{$height}: #{$value};
+        }
+      }
+    }
+  }
+
+  //font size
+  @each $scr-size, $font-size in $type-scale {
+    @if $scr-size == small {
+      @each $size, $value in $font-size {
+        --fs-#{$size}: #{$value};
+      }
+    } @else {
+      @include mq(medium) {
+        @each $size, $value in $font-size {
+          --fs-#{$size}: #{$value};
+        }
+      }
+    }
+  }
+}

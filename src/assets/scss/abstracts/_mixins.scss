@@ -1,0 +1,49 @@
+@use "sass:map";
+@use "breakpoints" as *;
+@use "colors" as *;
+@use "fonts" as *;
+@use "type-style" as *;
+
+/* ======
+   MIXINS
+*/
+
+// Media Query
+@mixin mq($key) {
+  $size: map-get($breakpoints, $key);
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
+// Font Face
+@mixin ff($font, $fallback) {
+  font-family: map.get($fonts, $font), $fallback;
+  font-family: var(--ff-#{$font});
+}
+
+// Font Weight
+@mixin fw($weight) {
+  font-weight: map.get($font-weight, $weight);
+  font-weight: var(--fw-#{$weight});
+}
+
+// Line Height
+@mixin lh($height) {
+  line-height: map.get($line-height, small, $height);
+  line-height: var(--lh-#{$height});
+  @include mq(medium) {
+    line-height: map.get($line-height, medium, $height);
+    line-height: var(--lh-#{$height});
+  }
+}
+
+// Font Size
+@mixin fs($size) {
+  font-size: map.get($type-scale, small, $size);
+  font-size: var(--fs-#{$size});
+  @include mq(medium) {
+    font-size: map.get($type-scale, medium, $size);
+    font-size: var(--fs-#{$size});
+  }
+}

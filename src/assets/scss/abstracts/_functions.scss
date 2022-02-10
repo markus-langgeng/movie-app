@@ -1,0 +1,20 @@
+@use "sass:map";
+@use "sass:color";
+@use "colors" as *;
+@use "type-style" as *;
+
+//color
+@function clr($base, $shade: 200) {
+  $color: map.get(map.get($colors, $base), $shade);
+  @return $color;
+}
+//alpha between -1 - 1
+@function to-rgba($clr, $opacity) {
+  $color: color.adjust($clr, $alpha: $opacity);
+  @return $color;
+}
+//lightness between -100% - 100%
+@function adj-lightness($clr, $light-val) {
+  $color: color.adjust($clr, $lightness: $light-val);
+  @return $color;
+}

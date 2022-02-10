@@ -1,0 +1,15 @@
+@use "../abstracts/functions" as *;
+@use "../abstracts/type-style" as *;
+@use "../abstracts/mixins" as *;
+
+/* =============
+   ====NAVBAR===
+*/
+nav {
+  background-color: clr(primary);
+  .container {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+  }
+}

@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-    <h1>Movie App</h1>
+  <div>
+    <h1>Watch List</h1>
     <MovieCard />
   </div>
 </template>
@@ -9,7 +9,7 @@
 import MovieCard from '@/components/MovieCard.vue'
 
 export default {
-  name: 'Home',
+  name: 'WatchList',
   components: {
     MovieCard
   }
