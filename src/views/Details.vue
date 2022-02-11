@@ -1,5 +1,5 @@
 <template>
-  <div class="detail" >
+  <div class="detail" v-if="detail">
       <div class="backdrop" :style="{'background-image': `url('http://image.tmdb.org/t/p/original${detail.backdrop_path}')`}">
         <div class="detail-content">
           <h1> {{detail.title}} </h1>
