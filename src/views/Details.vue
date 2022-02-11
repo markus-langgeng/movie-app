@@ -28,8 +28,7 @@ export default {
   name: 'Details',
   data () {
     return {
-      detail: null,
-      id: this.$route.params.id
+      detail: null
     }
   },
   created () {
