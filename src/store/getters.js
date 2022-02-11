@@ -7,9 +7,7 @@ export default {
   },
   checkIds: (state) => {
     return function (id) {
-      const a = state.watchlist_ids.includes(id)
-      console.log(a)
-      return a
+      return state.watchlist_ids.includes(id)
     }
   }
 }

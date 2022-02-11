@@ -9,7 +9,7 @@
           <div class="h1"> {{ movie.title }} </div>
           <div class="btn-container">
             <router-link class="more-info" :to="`/details/${movie.id}`" >More Info</router-link>
-            <button class="add-watchlist" @click="rmFromWatchList(movie); removeId(movie.id)" >Remove from watchlist</button>
+            <button class="add-watchlist" @click="rmFromWatchList(movie.id); removeId(movie.id)" >Remove from watchlist</button>
           </div>
         </div>
       </div>

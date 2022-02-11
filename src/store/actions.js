@@ -9,7 +9,7 @@ export default {
   addToWatchList ({ commit }, payload) {
     commit('appendToWatchList', payload)
   },
-  rmFromWatchList ({ commit }, { id }) {
+  rmFromWatchList ({ commit }, id) {
     commit('subtractFromWatchList', id)
   },
   addId ({ commit }, id) {
