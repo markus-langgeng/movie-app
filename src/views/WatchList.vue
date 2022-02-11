@@ -1,17 +1,23 @@
 <template>
   <div>
     <h1>Watch List</h1>
-    <MovieCard />
+    <p v-if="!allWatchList.length">Empty...</p>
+    <WatchListCard
+    />
   </div>
 </template>
 
 <script>
-import MovieCard from '@/components/MovieCard.vue'
+import { mapGetters } from 'vuex'
+import WatchListCard from '@/components/WatchListCard.vue'
 
 export default {
   name: 'WatchList',
   components: {
-    MovieCard
+    WatchListCard
+  },
+  computed: {
+    ...mapGetters(['allWatchList'])
   }
 }
 </script>

@@ -1,4 +1,5 @@
 export default {
   movies: null,
-  watchlist: []
+  watchlist: [],
+  watchlist_ids: []
 }

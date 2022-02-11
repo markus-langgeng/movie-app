@@ -1,9 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Details from '../views/Details.vue'
-import Category from '../views/Category.vue'
 import WatchList from '../views/WatchList.vue'
+import Details from '../views/Details.vue'
 
 Vue.use(VueRouter)
 
@@ -14,14 +13,9 @@ const routes = [
     component: Home
   },
   {
-    path: '/details',
+    path: '/details/:id',
     name: 'Details',
     component: Details
-  },
-  {
-    path: '/category',
-    name: 'Category',
-    component: Category
   },
   {
     path: '/watchlist',

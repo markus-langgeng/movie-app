@@ -3,7 +3,6 @@
     <nav id="nav">
       <div class="container">
         <router-link to="/">Home</router-link>
-        <router-link to="/category">Category</router-link>
         <router-link to="/watchlist">Watch List</router-link>
       </div>
     </nav>

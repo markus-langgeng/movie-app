@@ -1,4 +1,10 @@
-@use "../abstracts/mixins" as *;
+@use "../abstracts" as *;
 #app {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: clr(grayscale, 100);
+}
+.footer {
+  margin-top: auto;
 }

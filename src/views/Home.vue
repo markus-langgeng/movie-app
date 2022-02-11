@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1>Movie App</h1>
+    <h1>All Movies</h1>
     <MovieCard />
   </div>
 </template>
