@@ -25,14 +25,14 @@
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
-  props: {
-    showBtn: Function
-  },
-  data () {
-    return {
-      clickedBtn: []
-    }
-  },
+  // props: {
+  //   showBtn: Function
+  // },
+  // data () {
+  //   return {
+  //     clickedBtn: []
+  //   }
+  // },
   name: 'MovieCard',
   computed: {
     ...mapGetters([

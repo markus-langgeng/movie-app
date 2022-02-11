@@ -20,13 +20,13 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 export default {
-  props: {
-    insideWatchlist: Array
-  },
+  // props: {
+  //   insideWatchlist: Array
+  // },
   name: 'WatchListCard',
   data () {
     return {
-      isDisabled: false,
+      // isDisabled: false,
       movieIds: null
     }
   },

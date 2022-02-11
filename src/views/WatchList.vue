@@ -2,8 +2,7 @@
   <div>
     <h1>Watch List</h1>
     <p v-if="!allWatchList.length">Empty...</p>
-    <WatchListCard
-    />
+    <WatchListCard />
   </div>
 </template>
 

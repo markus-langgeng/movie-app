@@ -21,7 +21,6 @@
 </template>
 
 <script>
-// import axios from 'vuex'
 import axios from 'axios'
 
 export default {
@@ -46,8 +45,7 @@ export default {
   },
   computed: {
     getGenres () {
-      const genre = this.detail.genre_ids
-      return this.setGenres(genre)
+      return this.setGenres(this.detail.genre_ids)
     }
   },
   methods: {
