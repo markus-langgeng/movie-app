@@ -11,7 +11,7 @@
             <router-link class="more-info" :to="`/details/${movie.id}`">More Info</router-link>
             <button
             class="add-watchlist"
-            @click.once="addToWatchList(movie); addId(movie.id)"
+            @click="addToWatchList(movie); addId(movie.id)"
             v-show="!checkIds(movie.id)"
             >Add to watchlist</button>
           </div>
