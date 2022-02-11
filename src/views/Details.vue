@@ -52,7 +52,6 @@ export default {
   },
   methods: {
     setGenres (a) {
-      console.log(a)
       const newArr = []
       a.forEach(item => {
         switch (item) {
